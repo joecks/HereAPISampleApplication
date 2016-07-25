@@ -9,8 +9,6 @@ You can download the .apk file [here](http://bit.ly/2alxBAB) or [here](https://w
 2. Specify `config.here.app_id` and `config.here.app_code` in the `config.gradle` file from the root folder
 
 #3-rd party libraries used:
--
-
 * [Here Android SDK](https://developer.here.com/mobile-sdks/documentation/android/topics/user-guide.html)
 * [Android Support Library](https://developer.android.com/topic/libraries/support-library/index.html)
 * [ButterKnife](https://github.com/JakeWharton/butterknife)
@@ -22,9 +20,7 @@ You can download the .apk file [here](http://bit.ly/2alxBAB) or [here](https://w
 * [Gson](https://github.com/google/gson)
 * DexMaker
 
-Test frameworks:
--
-
+#Test frameworks:
 * JUnit
 * Espresso
 * [Mockito](https://mockito.github.io)
