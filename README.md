@@ -1,4 +1,4 @@
-# HereAPISampleApplication
+# Here API Sample Application
 
 A sample app implementing Here Android SDK
 
