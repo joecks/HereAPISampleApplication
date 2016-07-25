@@ -1,0 +1,80 @@
+apply from: '../config.gradle'
+
+ext {
+
+    module_support_library = [
+            "com.android.support:appcompat-v7:${config.version.support_library}",
+            "com.android.support:design:${config.version.support_library}",
+            "com.android.support:support-annotations:${config.version.support_library}",
+            "com.android.support:cardview-v7:${config.version.support_library}"
+    ]
+
+    module_batch_tools = [
+            "com.jakewharton:butterknife:${config.version.butterknife}",
+            "com.google.dagger:dagger:${config.version.dagger}",
+            "javax.annotation:jsr250-api:${config.version.jsr250}"
+    ]
+
+    module_batch_apt = [
+            "com.jakewharton:butterknife-compiler:${config.version.butterknife}",
+            "com.squareup:javapoet:${config.version.javapoet}",
+            "com.google.dagger:dagger-compiler:${config.version.dagger}"
+    ]
+
+    module_jts = [
+            "com.vividsolutions:jts:${config.version.jts}"
+    ]
+
+    module_gson = [
+            "com.google.code.gson:gson:${config.version.gson}"
+    ]
+
+    module_retrofit = [
+            "com.squareup.retrofit2:adapter-rxjava:${config.version.retrofit}",
+            "com.squareup.retrofit2:converter-gson:${config.version.retrofit}",
+            "com.squareup.retrofit2:retrofit:${config.version.retrofit}"
+    ]
+
+    module_rx_databinding = [
+            "com.jakewharton.rxbinding:rxbinding:${config.version.rx_databinding}",
+            "com.jakewharton.rxbinding:rxbinding-support-v4:${config.version.rx_databinding}",
+            "com.jakewharton.rxbinding:rxbinding-recyclerview-v7:${config.version.rx_databinding}"
+    ]
+
+    module_junit = [
+            "com.android.support.test:runner:${config.version.junit}",
+            "com.android.support.test:rules:${config.version.junit}",
+    ]
+
+    module_espresso = [
+            "com.android.support.test.espresso:espresso-idling-resource:${config.version.espresso}",
+            "com.android.support.test.espresso:espresso-core:${config.version.espresso}",
+            "com.android.support.test.espresso:espresso-intents:${config.version.espresso}"
+    ]
+
+    module_powermock = [
+            "org.powermock:powermock-api-mockito:${config.version.powermock}",
+            "org.powermock:powermock-module-junit4:${config.version.powermock}"
+    ]
+
+    module_mockito = [
+            "org.mockito:mockito-core:${config.version.mockito}"
+    ]
+
+    module_dexmaker = [
+            "com.google.dexmaker:dexmaker:${config.version.dexmaker}",
+            "com.google.dexmaker:dexmaker-mockito:${config.version.dexmaker}"
+    ]
+
+    module_unit_test_frameworks = [
+            module_junit,
+            module_mockito,
+            module_powermock
+    ]
+
+    module_intrumentation_test_frameworks = [
+            module_dexmaker,
+            module_mockito,
+            module_espresso
+    ]
+}

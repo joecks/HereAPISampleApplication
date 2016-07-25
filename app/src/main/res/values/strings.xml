@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Here API Sample Application</string>
+    <string name="start_point">Start point</string>
+    <string name="end_point">End point</string>
+    <string name="start_point_text_formatted">From: %s</string>
+    <string name="end_point_text_formatted">To: %s</string>
+    <string name="search_hint">Enter address or place</string>
+    <string name="search_help">Start typing to see a list of suggestions</string>
+    <string name="search_no_results">No results were found for your input</string>
+    <string name="search_common_error">There was an error performing your request.\nPlease try again later</string>
+
+    <string name="map_init_error">There was an error initializing the map!</string>
+    <string name="map_route_calculation_progress">Calculating a new route…</string>
+    <string name="map_route_error_common">No route has been found!</string>
+
+    <string name="search_field_transition" translatable="false">search_transition</string>
+</resources>

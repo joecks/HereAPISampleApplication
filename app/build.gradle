@@ -1,0 +1,59 @@
+apply plugin: 'com.android.application'
+apply plugin: 'me.tatarka.retrolambda'
+apply plugin: 'com.neenbedankt.android-apt'
+apply from: './dependencies.gradle'
+
+android {
+    compileSdkVersion config.version.app_compile_sdk
+    buildToolsVersion config.version.app_build_tools
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        applicationId "x0r.hereapisampleapplication"
+
+        minSdkVersion config.version.app_min_sdk
+        targetSdkVersion config.version.app_target_sdk
+
+        versionCode config.version.app_version_code
+        versionName config.version.app_version_name
+
+        manifestPlaceholders = [ app_id : config.here.app_id, app_code : config.here.app_code ]
+
+        buildConfigField "String", "APP_ID", "\"${config.here.app_id}\""
+        buildConfigField "String", "APP_CODE", "\"${config.here.app_code}\""
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    configurations.all {
+        resolutionStrategy.force module_support_library
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    apt module_batch_apt
+
+    compile module_support_library
+    compile module_jts
+    compile module_gson
+    compile module_batch_tools
+    compile module_retrofit
+    compile module_rx_databinding
+
+    testCompile module_unit_test_frameworks
+    androidTestCompile module_intrumentation_test_frameworks
+
+}
